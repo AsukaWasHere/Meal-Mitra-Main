@@ -12,12 +12,14 @@ import Getchoice from "./Getchoice";
 import Donate from "./Donate";
 import Receive from "./Receive";
 import Receiveresults from "./Receiveresults";
+import Chatbot from "./components/Chatbot"; // This import is already there!
 
 function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
         <Navbar />
+        
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -32,6 +34,10 @@ function App() {
             <Route path="/receiveresults" element={<Receiveresults />} />
           </Routes>
         </main>
+
+        {/* --- ADD THE CHATBOT HERE --- */}
+        <Chatbot /> 
+        
         <Footer />
       </div>
     </Router>

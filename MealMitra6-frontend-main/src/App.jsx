@@ -14,7 +14,8 @@ import UpiPayment from "./UpiPayment";
 import OrderConfirmation from "./OrderConfirmation";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ReceiverTypeChoice from "./ReceiverTypeChoice";
-import Receiveresults from "./Receiveresults"; // Add this import line
+import Receiveresults from "./Receiveresults"; 
+import Chatbot from "./components/Chatbot"; // <--- ADD THIS LINE (Step 1)
 
 function App() {
   return (
@@ -41,6 +42,11 @@ function App() {
             <Route path="/order-confirmation" element={<ProtectedRoute><OrderConfirmation /></ProtectedRoute>} />
           </Routes>
         </main>
+
+        {/* <--- ADD THIS LINE HERE (Step 2) ---> */}
+        {/* This makes the chatbot show up on every page! */}
+        <Chatbot /> 
+
         <Footer />
       </div>
     </Router>
